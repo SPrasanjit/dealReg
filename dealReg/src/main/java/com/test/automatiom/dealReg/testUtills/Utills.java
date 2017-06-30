@@ -1,4 +1,4 @@
-package com.test.automatiom.dealReg.utills;
+package com.test.automatiom.dealReg.testUtills;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
@@ -23,6 +23,7 @@ public class Utills {
 	
 	public static WebDriver selectBrowser(String browser){
 		if (browser.equals("firefox") || browser.equals("FIREFOX")) {
+			System.setProperty("webdriver.gecko.driver", "C:\\Workspace_Prasanjit005\\dealReg\\Drivers\\geckodriver.exe");
 			driver = new FirefoxDriver();
 			driver.manage().window().maximize();
 			return driver;

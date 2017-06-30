@@ -22,9 +22,9 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.test.automatiom.dealReg.BP_Temp_Submission.BP_Temp_Submission;
-import com.test.automatiom.dealReg.LoginPage.LoginPage;
+import com.test.automatiom.dealReg.pageLibrary.LoginPage;
 import com.test.automatiom.dealReg.testBase.TestBase;
-import com.test.automatiom.dealReg.utills.Utills;
+import com.test.automatiom.dealReg.testUtills.Utills;
 
 import freemarker.core.ReturnInstruction.Return;
 
@@ -47,8 +47,8 @@ public class W3_Approve extends TestBase {
 			String s = "P" + regno;
 			driverwait(10);
 			Reporter.log("W3 Application is up and running");	
-			LoginPage obj1 = new LoginPage();
-			obj1.loginToW3Portal(driver);
+			LoginPage login = new LoginPage();
+			login.loginToW3Portal(driver);
 			driverwait(10);
 
 			WebDriverWait wait = new WebDriverWait(driver, 30);
@@ -125,7 +125,8 @@ public class W3_Approve extends TestBase {
 
 				((JavascriptExecutor)driver).executeScript(("document.getElementById('com_ibm_ciolab_core_Button_7_label').scrollIntoView(true);"));
 		 		Thread.sleep(5000);
-		 		driver.findElement(By.xpath("//div[@class='dijitBorderContainer dijitContainer']/span[2]/span/span/span[contains(text(),'Continue')]")).click();
+		 		//driver.findElement(By.xpath("html/body/div[1]/div[2]/div[3]/div/div/div[1]/div[1]/div/div/div/div/div[4]/div[7]/span[2]/span/span/span[3]")).click();
+		 		driver.findElement(By.xpath("//div[@class='dijitBorderContainer dijitContainer']/span/span/span/span[contains(text(),'Continue')]")).click();
 
 		 		Thread.sleep(25000);
 				driver.findElement(By.xpath("//div/fieldset/div[1]/label[contains(text(),'Approve')]")).click();

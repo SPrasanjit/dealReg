@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+<listener class-name="com.test.automation.dealReg.customListner.Listener"></listener>
+<listener class-name="com.test.automation.dealReg.customListner.RetryListener"></listener>
+</listeners>
+  <test name="Test">
+    <classes>
+      <class name="com.test.automatiom.dealReg.E2E_GPP_Validation.E2E_GPP_Validation"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

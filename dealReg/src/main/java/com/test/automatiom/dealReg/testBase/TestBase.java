@@ -7,7 +7,8 @@ import java.util.Properties;
 
 import org.testng.Reporter;
 
-import com.test.automatiom.dealReg.utills.Utills;
+import com.test.automatiom.dealReg.testUtills.Utills;
+
 
 
 	public class TestBase extends Utills{
@@ -47,6 +48,4 @@ import com.test.automatiom.dealReg.utills.Utills;
 			Reporter.log("Browser Closed");
 			
 		}
-	}
-
-
+}

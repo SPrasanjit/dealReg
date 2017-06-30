@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.test.automatiom.dealReg.E2E_GPP_Validation.E2E_GPP_Validation">
+      <class name="com.test.automatiom.dealReg.w3_Approval.Admin">
         <methods>
-          <include name="GPP_Validate"/>
-          <include name="setUp"/>
-          <include name="attachScreenshot"/>
+          <include name="Approve_Form"/>
         </methods>
-      </class> <!-- com.test.automatiom.dealReg.E2E_GPP_Validation.E2E_GPP_Validation -->
+      </class> <!-- com.test.automatiom.dealReg.w3_Approval.Admin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

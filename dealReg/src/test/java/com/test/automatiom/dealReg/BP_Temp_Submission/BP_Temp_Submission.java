@@ -22,9 +22,9 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.log4testng.Logger;
 
-import com.test.automatiom.dealReg.LoginPage.LoginPage;
+import com.test.automatiom.dealReg.pageLibrary.LoginPage;
 import com.test.automatiom.dealReg.testBase.TestBase;
-import com.test.automatiom.dealReg.utills.Utills;
+import com.test.automatiom.dealReg.testUtills.Utills;
 
 import freemarker.core.ReturnInstruction.Return;
 
@@ -44,8 +44,8 @@ public class BP_Temp_Submission extends TestBase{
 	    //new BP_LoginPage().loginToBPPortal(driver);
 		
 			
-		LoginPage obj1 = new LoginPage();
-		obj1.loginToBPPortal(driver);
+		LoginPage login = new LoginPage();
+		login.loginToBPPortal(driver);
 		driverwait(60);
 
 		WebDriverWait wait=new WebDriverWait(driver, 180);
@@ -230,7 +230,7 @@ public class BP_Temp_Submission extends TestBase{
 	
 @AfterClass
 public void tearDown() {
-	closeBrowser();
+	//closeBrowser();
 	Reporter.log("Browser Closed");
 }
 }
