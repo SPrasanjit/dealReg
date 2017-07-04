@@ -33,7 +33,7 @@ public class w3Ap {
 			 		Thread.sleep(20000);
 			 		driver1.findElement(By.linkText("Admin")).click();
 					Thread.sleep(10000);
-					 		driver1.findElement(By.id("com_ibm_ciolab_dr_admin_TasksListFilter_0_solutionIdFilter")).sendKeys("L329129");
+					 		driver1.findElement(By.id("com_ibm_ciolab_dr_admin_TasksListFilter_0_solutionIdFilter")).sendKeys("L329154");
 					 		driver1.findElement(By.xpath("//span/span/span[contains(text(),'Apply')]")).click(); 
 					 		Thread.sleep(55000);
 					 		JavascriptExecutor jse = (JavascriptExecutor)driver1;
@@ -57,7 +57,7 @@ public class w3Ap {
 					 	   		 	   Thread.sleep(90000); 
 			 		driver1.findElement(By.linkText("Tasks")).click();
 					Thread.sleep(10000);
-					 		driver1.findElement(By.id("com_ibm_ciolab_dr_mytasks_ListFilter_0_request_Id")).sendKeys("L329129");
+					 		driver1.findElement(By.id("com_ibm_ciolab_dr_mytasks_ListFilter_0_request_Id")).sendKeys("L329154");
 					 		Thread.sleep(17000);
 					 		driver1.findElement(By.xpath("//span/span[@role='button']/span[3][contains(text(),'Apply')]")).click();
 					 		Thread.sleep(25000);
@@ -101,6 +101,10 @@ public class w3Ap {
 			 		driver1.findElement(By.xpath("//div[@class='dijitBorderContainer dijitContainer']/span/span/span/span[contains(text(),'Continue')]")).click();
 			 		
 			 		Thread.sleep(95000);
+			 	
+			 		JavascriptExecutor je = (JavascriptExecutor)driver1;
+			 		je.executeScript("window.scrollBy(0,-250)", "");
+			 		
 					driver1.findElement(By.xpath("//div/fieldset/div[1]/label[contains(text(),'Approve')]")).click();
 			 		Thread.sleep(5000);
 			 		driver1.findElement(By.xpath("//span[3][contains(text(),'Auto-generate')]")).click();

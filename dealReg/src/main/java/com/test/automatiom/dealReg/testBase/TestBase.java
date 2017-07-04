@@ -22,6 +22,7 @@ import com.test.automatiom.dealReg.testUtills.Utills;
 		
 		public void init() throws IOException{
 			Reporter.log("Loading Properties into memory");
+			System.out.println("Browser opened");
 			loadPropertiesFile();
 		    Reporter.log("Browser is up and running");
 			selectBrowser("chrome");
